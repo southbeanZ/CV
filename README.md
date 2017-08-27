@@ -1,2 +1,2 @@
-# PersonResume
-Person resume
+# PersonalResume
+Personal resume
