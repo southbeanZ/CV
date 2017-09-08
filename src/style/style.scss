@@ -1,0 +1,29 @@
+@import './reset.css';
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+  .icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url() 50% 50% no-repeat;
+    background-size: 100% 100%;
+    margin-right: 10px;
+    &.i-location {
+      background-image: url('../img/icon-location.png')
+    }
+    &.i-github {
+      background-image: url('../img/icon-github.png')
+    }
+    &.i-phone {
+      background-image: url('../img/icon-phone.png')
+    }
+    &.i-email {
+      background-image: url('../img/icon-email.png')
+    }
+    &.i-tag {
+      background-image: url('../img/icon-bookmark.png')
+    }
+  }
+}

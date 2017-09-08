@@ -1,2 +1,2 @@
-# PersonalResume
-Personal resume
+# CV
+个人简历
