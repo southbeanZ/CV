@@ -1,29 +1,26 @@
 @import './reset.css';
 
-body {
+.m-part {
   width: 1000px;
+  height: 100vh;
   margin: 0 auto;
-  .icon {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: url() 50% 50% no-repeat;
-    background-size: 100% 100%;
-    margin-right: 10px;
-    &.i-location {
-      background-image: url('../img/icon-location.png')
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .u-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  .u-profile {
+    margin-left: 60px;
+    .name {
+      font-size: 60px;
+      font-weight: bold;
     }
-    &.i-github {
-      background-image: url('../img/icon-github.png')
-    }
-    &.i-phone {
-      background-image: url('../img/icon-phone.png')
-    }
-    &.i-email {
-      background-image: url('../img/icon-email.png')
-    }
-    &.i-tag {
-      background-image: url('../img/icon-bookmark.png')
+    .job {
+      font-size: 30px;
+      font-weight: bold;
     }
   }
 }
