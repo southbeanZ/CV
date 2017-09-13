@@ -1,5 +1,13 @@
 @import './reset.css';
 
+$colors: #fff2cc #ff0 #c5f277 #0f0 #0ff #00f #90f #f00 #900 #000;
+
+@keyframes stretch {
+  0% {
+    width: 0;
+  }
+}
+
 .m-part {
   width: 1000px;
   height: 100vh;
@@ -29,7 +37,7 @@
   }
 }
 
-.m-part-project {
+.m-part-project, .m-part-skill, .m-part-more {
   .u-tlt {
     font-size: 30px;
     text-align: center;
@@ -61,3 +69,42 @@
   }
 }
 
+.m-skill-list {
+  .u-item {
+    margin: 20px;
+    font-size: 0;
+    .name {
+      display: inline-block;
+      width: 30%;
+      font-size: 20px;
+      text-align: right;
+      padding-right: 20px;
+      vertical-align: middle;
+    }
+    .degree {
+      display: inline-block;
+      width: 0%;
+      height: 30px;
+      background: #fff;
+      vertical-align: middle;
+      animation: stretch 1s ease-in;
+      
+      @for $i from 1 through 10 {
+        &[data-degree="#{$i}"] {
+          width: 6% * $i;
+          background: nth($colors, $i);
+        }
+      }
+    }
+  }
+}
+
+.m-part-more {
+  text-align: center;
+  .u-txt {
+    font-size: 20px;
+    a:hover {
+      font-size: 30px;
+    }
+  }
+}
