@@ -8,6 +8,11 @@ $colors: #fff2cc #ff0 #c5f277 #0f0 #0ff #00f #90f #f00 #900 #000;
   }
 }
 
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .m-part {
   width: 1000px;
   height: 100vh;
