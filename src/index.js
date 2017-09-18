@@ -43,18 +43,20 @@ let page = {
   },
   scrollSection: function (height, duration) {
     let gap = 10,
-        step = Math.ceil(height * gap / duration),
-        counter = 0,
         coe = height > 0 ? 1 : -1,
-        interval = setInterval(() => {
-            let dist = height - counter * step
-            window.scrollBy(0, coe * step < coe * dist ? step : dist)
-            counter++
-            if (coe * dist <= coe * step) {
-              // let tmp = document.body.scrollTop 
-              clearInterval(interval)
-            }
-        }, gap)
+        step = Math.ceil(height * gap / duration),
+        counter = 0
+    if (step % 2) {
+      step += (step > 0 ? 1 : -1)
+    }
+    let interval = setInterval(() => {
+        let dist = height - counter * step
+        window.scrollBy(0, coe * step < coe * dist ? step : dist)
+        counter++
+        if (coe * dist <= coe * step) {
+          clearInterval(interval)
+        }
+    }, gap)
   }
 }
 
