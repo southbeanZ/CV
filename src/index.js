@@ -19,9 +19,6 @@ let page = {
     let self = this
     let isScroll = false
     window.addEventListener('mousewheel', (e) => {
-      // console.log(e)
-      // console.log(e.deltaY)
-      // console.log(e.wheelDelta)
       if (!isScroll) {
         isScroll = true
         if (e.deltaY > 0 || e.wheelDelta < 0) {
@@ -33,6 +30,8 @@ let page = {
         }
         // document.body.scrollTop = self.windowHeight * self.curPage
         self.scrollSection(self.windowHeight * self.curPage, 500)
+        // console.log(window.innerHeight)
+        // window.scrollBy(0, window.innerHeight)
         setTimeout(() => {
           isScroll = false
         }, 1000)
@@ -52,6 +51,7 @@ let page = {
             window.scrollBy(0, coe * step < coe * dist ? step : dist)
             counter++
             if (coe * dist <= coe * step) {
+              // let tmp = document.body.scrollTop 
               clearInterval(interval)
             }
         }, gap)
